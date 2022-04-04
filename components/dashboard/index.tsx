@@ -1,5 +1,6 @@
 import styles from './dashboard.module.scss';
-import { formatCurrencyEuro } from './../../utils/currency-format';
+import { formatCurrencyEuro } from '../../utils/currency-format';
+import { useSheet } from './../../hooks/use-sheet';
 
 const leftArrow = (
 	<svg
@@ -76,13 +77,17 @@ const TopProducts: React.FC<{ products: Product[] }> = ({ products }) => (
 	</div>
 );
 
-export const Dashboard = () => (
-	<div className={styles.wrapper}>
-		<Header nextRefresh={10} />
-		<Hero value={1000} />
-		<div className={styles.tables}>
-			<Products products={[]} />
-			<TopProducts products={[]} />
+export const Dashboard = () => {
+	const { data } = useSheet();
+
+	return (
+		<div className={styles.wrapper}>
+			<Header nextRefresh={10} />
+			<Hero value={1000} />
+			<div className={styles.tables}>
+				<Products products={[]} />
+				<TopProducts products={[]} />
+			</div>
 		</div>
-	</div>
-);
+	);
+};
