@@ -1,5 +1,6 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { Layout } from '../components/layout/layout';
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -10,7 +11,9 @@ const queryClient = new QueryClient({
 });
 
 const App: React.FC = ({ children }) => (
-	<QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+	<Layout>
+		<QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+	</Layout>
 );
 
 export default App;

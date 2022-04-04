@@ -11,7 +11,8 @@
     "@snowstorm/core": "^0.18.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-query": "^3.34.19"
+    "react-query": "^3.34.19",
+    "sass": "^1.49.11"
   },
   "devDependencies": {
     "@explodingcamera/eslint-config": "^21.2.0",

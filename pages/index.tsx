@@ -1,1 +1,3 @@
-export const Index = () => <h1>lol</h1>;
+import { Dashboard } from '../components/dashboard';
+
+export const Index = () => <Dashboard />;

@@ -5,12 +5,36 @@
   --heading-weight: 700;
   --paragraph-weight: 400;
 
+  --page-background-color: #000000;
+  --page-padding: 36px;
+
+  --button-background-color: #26262c;
+  --button-border-radius: 5px;
+
   --text-primary: #ffffff;
   --text-dark: #c4c4c4;
   --text-light: #fafafa;
   --text-soft: #e8e8e8;
 
+  --table-background: #26262c;
+
   --progress-color: #2066d2;
   --progress-background-color: #2f2f2f;
   --progress-pointer-color: #c4c4c4;
+}
+
+html {
+  background-color: var(--page-background-color);
+  color: var(--text-primary);
+  font-family: var(--font-sans-serif);
+}
+
+body {
+  background-image: url("./../../assets/bg.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+p {
+  color: var(--text-soft);
 }
