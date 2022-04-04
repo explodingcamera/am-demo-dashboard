@@ -21,6 +21,10 @@
     place-content: center;
     margin-left: 1rem;
     cursor: pointer;
+
+    &:last-of-type {
+      transform: rotateY(180deg);
+    }
   }
 
   > div:first-of-type {
@@ -39,6 +43,7 @@
       color: var(--text-primary);
       font-family: var(--font-sans-serif);
       padding-right: 8rem;
+      width: 25rem;
     }
 
     div {
@@ -51,6 +56,8 @@
       font-weight: 400;
       span {
         font-weight: 700;
+        display: inline-block;
+        width: 2rem;
       }
     }
   }

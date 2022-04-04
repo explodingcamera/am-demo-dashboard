@@ -1,8 +1,18 @@
 import { useQuery } from 'react-query';
 import { getSpreadsheet } from '../utils/sheet';
 
-export const useSheet = (id?: string, apikey?: string) =>
-	useQuery(['sheet', id], async () => getSpreadsheet(id, apikey), {
-		suspense: true,
-		enabled: !import.meta.env.SSR,
-	});
+interface SheetOptions {
+	id?: string;
+	apikey?: string;
+	range?: string;
+}
+
+export const useSheet = ({ apikey, id, range }: SheetOptions = {}) =>
+	useQuery(
+		['sheet', range, id],
+		async () => getSpreadsheet(id, apikey, range),
+		{
+			// suspense: true,
+			enabled: !import.meta.env.SSR,
+		},
+	);
