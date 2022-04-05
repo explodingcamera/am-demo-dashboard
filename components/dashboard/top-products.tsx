@@ -1,3 +1,4 @@
+import { formatCurrencyEuro } from '../../utils/currency-format';
 import { Product } from '../../utils/order-data';
 import { ProgressBar } from '../progressbar';
 import styles from './dashboard.module.scss';
@@ -27,7 +28,9 @@ export const TopProducts: React.FC<{ products: Product[]; total: number }> = ({
 								maxValue={total}
 								className={styles.progress}
 							/>
-							<span>{product.amount}</span>
+							<span>
+								<b>{formatCurrencyEuro(product.amount)}</b>
+							</span>
 						</td>
 					</tr>
 				))}

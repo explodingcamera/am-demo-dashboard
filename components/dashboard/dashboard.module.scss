@@ -6,6 +6,7 @@
 
 .header {
   padding: var(--page-padding);
+  margin-top: 3rem;
   display: flex;
   justify-content: space-between;
 
@@ -116,13 +117,14 @@
       }
 
       span {
-        width: 4rem;
+        width: 8rem;
         margin-left: 1rem;
         text-align: right;
       }
 
       .progress {
         flex: 1;
+        background-color: transparent;
       }
     }
 
