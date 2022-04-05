@@ -1,0 +1,29 @@
+.progressbar {
+  position: relative;
+  height: 1rem;
+  background-color: var(--progress-background-color);
+  padding-right: 1rem;
+
+  .progress {
+    left: 0;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--progress-color);
+    transform-origin: left;
+  }
+
+  .target {
+    position: absolute;
+    right: 10%;
+    background-color: var(--progress-pointer-color);
+    top: -10px;
+    width: 6px;
+    height: calc(100% + 20px);
+
+    > span {
+      transform: translateX(-50%) translateY(-2rem);
+      position: absolute;
+    }
+  }
+}

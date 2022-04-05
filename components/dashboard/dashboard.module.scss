@@ -72,6 +72,7 @@
   h1 {
     color: var(--text-primary);
     font-family: var(--font-sans-serif);
+    font-weight: 700;
     font-size: calc(10vw + 1rem);
   }
 }
@@ -97,11 +98,29 @@
     border-collapse: collapse;
     flex: 1;
 
+    .padding {
+      height: 1rem;
+    }
+
     thead {
       font-family: var(--font-serif);
       font-weight: 400;
+      font-size: 1.25rem;
+
       td {
         border-bottom: 1px solid white;
+        line-height: 1.8;
+      }
+    }
+
+    tbody {
+      font-family: var(--font-sans-serif);
+      color: var(--text-soft);
+
+      td {
+        font-size: 1.25rem;
+        padding-bottom: 0.6rem;
+        font-weight: 500;
       }
     }
   }
@@ -109,4 +128,9 @@
   div:first-of-type td:last-of-type {
     text-align: right;
   }
+}
+
+.monthVolumeBar.monthVolumeBar {
+  height: 3rem;
+  margin: var(--page-padding);
 }

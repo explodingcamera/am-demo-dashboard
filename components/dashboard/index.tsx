@@ -9,6 +9,7 @@ import { useSheet } from './../../hooks/use-sheet';
 import { useCallback } from 'react';
 import { useTime } from '../../hooks/use-time';
 import { useRefresh } from '../../hooks/use-refresh';
+import { ProgressBar } from '../progressbar';
 
 const leftArrow = (
 	<svg
@@ -97,12 +98,17 @@ const Orders: React.FC<{ orders: Order[] }> = ({ orders }) => (
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td className={styles.padding} />
+				</tr>
 				{orders.map(order => (
 					<tr key={order.index}>
 						<td>{order.index}</td>
 						<td>{order.date}</td>
 						<td>{order.name}</td>
-						<td>{order.amount}</td>
+						<td>
+							<b>{formatCurrencyEuro(order.amount)}</b>
+						</td>
 					</tr>
 				))}
 			</tbody>
@@ -119,6 +125,9 @@ const TopProducts: React.FC<{ products: Product[] }> = ({ products }) => (
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td className={styles.padding} />
+				</tr>
 				{products.map(product => (
 					<tr key={products.indexOf(product)}>
 						<td>{product.name}</td>
@@ -201,6 +210,12 @@ export const Dashboard = () => {
 				year={time.currentYear}
 			/>
 			<Hero loading={orders.isLoading} value={total} />
+			<ProgressBar
+				hasCashTarget
+				className={styles.monthVolumeBar}
+				currentValue={total}
+				maxValue={currentTargetNumber}
+			/>
 			<div className={styles.tables}>
 				<Orders orders={currentOrders} />
 				<TopProducts products={top5products} />
