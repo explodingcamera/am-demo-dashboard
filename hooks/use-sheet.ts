@@ -12,7 +12,6 @@ export const useSheet = ({ apikey, id, range }: SheetOptions = {}) =>
 		['sheet', range, id],
 		async () => getSpreadsheet(id, apikey, range),
 		{
-			// suspense: true,
 			enabled: !import.meta.env.SSR,
 		},
 	);

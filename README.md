@@ -20,14 +20,14 @@ $ pnpm run start
 ```
 
 ```bash
-$ pnpm run export
+$ pnpm run build
 # production build is now rendered and stored in ./dist
 ```
 
 ## Technical decisions
 
 - **React Framework**\
-  I'm using my own framwork called `snowstorm`. It's pretty much a more minimal alternative to `next.js` so it enabled me to get up and running really quickly and even for a single page makes it a bit more snappy by prerendering the html.
+  I'm using my own framwork called `snowstorm`. It's pretty much a more minimal alternative to `next.js` that enabled me to get up and running really quickly and, even for a single page app, makes it a bit more snappy by prerendering the html.
 - **Testing**\
   I've opted to use `vitest` instead of `jest` to minimize complexity (My react framework uses vite as a bundler and so does vitest). Other than that the bundler it's mostly the same api as `jest`.
 - **CSS-Modules**\
@@ -39,4 +39,7 @@ $ pnpm run export
 
 ## Notes
 
-I've decided to stick to a single sans-serif and serif font each, Montserrat and Roboto serve the same purpose and just make the page look inconsistent and degrade performance. Other than that, the figma file was unpolished/inconsistent, which is a bit weird with the pixel-prefect requirement, so I've changed some values around (I used css variables and e.g use the same padding on both the left and right side to make things consistent). Because of this and to save time I've not made a huge effort to make the site responsive. For tests theres a basic setup but likewise not going into too much depth here because it's a pretty simple site without a lot of complexity.
+- I've decided to stick to a single sans-serif and serif font each, Montserrat and Roboto serve the same purpose and just make the page look inconsistent and degrade performance.
+- The figma file was a bit unpolished/inconsistent, which is a bit weird with the pixel-prefect requirement, so I've changed some values around for concistency (and to use rem-based values). Because of this and to save time I've not made a huge effort to make the site responsive.
+- The purpose of the navigation buttons was unclear so I just made them show the next/prev month
+- For tests, there's an extremly basic setup but not going into too much depth here due to time constraints. The dashboard is pretty modular so it would be trival to write some meaningful tests (More tests and code comments would obv. be part of a production product but not for a one-off thing).

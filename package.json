@@ -4,7 +4,8 @@
     "dev": "snowstorm dev",
     "start": "snowstorm start",
     "build": "snowstorm export",
-    "test": "vitest"
+    "test-watch": "vitest",
+    "test": "vitest run"
   },
   "dependencies": {
     "@snowstorm/cli": "^0.18.0",

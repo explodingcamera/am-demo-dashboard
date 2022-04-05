@@ -102,6 +102,30 @@
       height: 1rem;
     }
 
+    .product {
+      display: flex;
+      align-items: center;
+
+      h2 {
+        width: 8rem;
+        margin-right: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.25rem;
+        white-space: nowrap;
+      }
+
+      span {
+        width: 4rem;
+        margin-left: 1rem;
+        text-align: right;
+      }
+
+      .progress {
+        flex: 1;
+      }
+    }
+
     thead {
       font-family: var(--font-serif);
       font-weight: 400;

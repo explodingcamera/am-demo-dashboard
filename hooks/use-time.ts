@@ -14,6 +14,7 @@ const MONTHS = [
 	'November',
 	'December',
 ];
+
 export const useTime = () => {
 	const [currentDate, setCurrentDate] = useState(() => new Date());
 	const currentMonth = currentDate.getMonth();
