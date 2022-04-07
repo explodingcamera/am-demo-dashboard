@@ -7,8 +7,8 @@ https://github.com/AM-code-treasure/coding-challenge-frontend-react
 ### Development
 
 ```bash
-$ pnpm install # alternatively use npm
-$ pnpm run dev
+$ pnpm install # or `npm i --force` when using npm
+$ pnpm run dev # npm run dev
 # now listening on http://localhost:2020/
 ```
 
